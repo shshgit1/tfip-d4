@@ -26,8 +26,11 @@ public class FortuneCclient {
     BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
 String OutputToServer="empty";
+
 while (!OutputToServer.equals("exit"))
-{ OutputToServer=br.readLine();
+
+{ 
+OutputToServer=br.readLine();
 dos.writeUTF (OutputToServer);
 dos.flush();
 String abc=new String(dinps.readUTF());
@@ -41,7 +44,7 @@ sock.close();
 catch (Exception exc)
 {
     
-   System.out.println(exc.getMessage());
+   System.out.println("client fail");
 }
 }
 }

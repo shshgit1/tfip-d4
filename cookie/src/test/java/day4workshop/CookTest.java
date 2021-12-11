@@ -11,22 +11,18 @@ import junit.framework.TestResult;
 public class CookTest {
     public static void main(String[] args) throws IOException {
         CookTest aa=new CookTest();
-        aa.testReturn();
+        aa.login();
 
     }
     @Test
     
-        public void testReturn() throws IOException
+        public void login() throws IOException
         {
             Cookie testercookie=new Cookie();
-            try{
-testercookie.returnCookie();
-System.out.println("aaaaaa");
-}
-catch (Exception e){
-System.out.println("not working");
+            testercookie.login("testonetwo");
+            
+            
 }
         }
 
     
-}
